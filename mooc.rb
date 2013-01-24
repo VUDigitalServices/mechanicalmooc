@@ -84,7 +84,7 @@ class Group
                       "@api.mailgun.net/v2/lists",
                       :address => list_address,
                       :access_level => 'members',
-                      :description => timezone)
+                      :description => "Unconfirmed - #{timezone}")
     RestClient.post("https://api:#{ENV['MAILGUN_API_KEY']}" \
                     "@api.mailgun.net/v2/lists/#{list_address}/members",
                     :address => "the-machine@mechanicalmooc.org",
@@ -145,7 +145,7 @@ post '/signup' do
     :learning_style => params[:styleRadios],
     :expertise => params[:expertiseRadios],
     :timezone => params[:timezone],
-    :round => 3
+    :round => 4
   )
   "Thanks for signing up, we'll email you soon."
 end
