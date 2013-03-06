@@ -36,6 +36,9 @@ class SequenceEmail
       send_email_to_groups( 188..209 )
     elsif @sequence == "sequence_3_groups"
       send_email_to_groups( 188..209 )
+    elsif @sequence == "sequence_4"
+      sequence4_users = User.all :round => 4
+      send_email_to_users( sequence4_users.collect{|u| u.email} , "bsesr")
     else
       @output_stream.puts "Not a valid sequence"
       return false
