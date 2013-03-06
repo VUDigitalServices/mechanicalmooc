@@ -1,4 +1,4 @@
-# Mecahnical MOOC
+# Mechanical MOOC
 
 The mechanical mooc is P2PU's open source implementation of the - hugely popular - MOOCs. Currently it contains:
 
